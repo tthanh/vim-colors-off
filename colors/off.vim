@@ -80,7 +80,7 @@ function! s:h(group, style)
 endfunction
 
 call s:h("Normal",        {"bg": s:bg, "fg": s:norm})
-call s:h("Cursor",        {"bg": s:blue, "fg": s:norm })
+call s:h("Cursor",        {"bg": s:bg, "fg": s:norm })
 call s:h("Comment",       {"fg": s:bg_subtle, "gui": "italic"})
 
 "call s:h("Constant",      {"fg": s:cyan})
@@ -89,14 +89,15 @@ hi! link Character        Constant
 hi! link Number           Constant
 hi! link Boolean          Constant
 hi! link Float            Constant
-hi! link String           Constant
+" hi! link String           Comment
+call s:h("String",	{"fg": s:medium_gray, "bg": s:bg})
 
 "call s:h("Identifier",    {"fg": s:dark_blue})
 hi! link Identifier       Normal
 hi! link Function         Identifier
 
-"call s:h("Statement",     {"fg": s:green})
-hi! link Statement        Normal
+call s:h("Statement",     {"fg": s:medium_gray})
+" hi! link Statement        Normal
 hi! link Conditonal       Statement
 hi! link Repeat           Statement
 hi! link Label            Statement
@@ -104,20 +105,20 @@ hi! link Operator         Statement
 hi! link Keyword          Statement
 hi! link Exception        Statement
 
-"call s:h("PreProc",       {"fg": s:red})
-hi! link PreProc          Normal
+call s:h("PreProc",       {"fg": s:medium_gray})
+" hi! link PreProc          Normal
 hi! link Include          PreProc
 hi! link Define           PreProc
 hi! link Macro            PreProc
 hi! link PreCondit        PreProc
 
-"call s:h("Type",          {"fg": s:purple})
-hi! link Type             Normal
+call s:h("Type",          {"fg": s:medium_gray})
+" hi! link Type             Normal
 hi! link StorageClass     Type
 hi! link Structure        Type
 hi! link Typedef          Type
 
-"call s:h("Special",       {"fg": s:pink})
+" call s:h("Special",       {"fg": s:norm, "gui": "italic"})
 hi! link Special          Normal
 hi! link SpecialChar      Special
 hi! link Tag              Special
@@ -168,12 +169,12 @@ else
   call s:h("SpellLocal",  {"cterm": "underline", "fg": s:dark_green})
 endif
 
-call s:h("Pmenu",         {"fg": s:norm, "bg": s:bg_subtle})
-call s:h("PmenuSel",      {"fg": s:norm, "bg": s:blue})
+call s:h("Pmenu",         {"fg": s:norm, "bg": s:bg_very_subtle})
+call s:h("PmenuSel",      {"fg": s:norm, "bg": s:bg_subtle})
 call s:h("PmenuSbar",     {"fg": s:norm, "bg": s:bg_subtle})
 call s:h("PmenuThumb",    {"fg": s:norm, "bg": s:bg_subtle})
 call s:h("TabLine",       {"fg": s:norm, "bg": s:bg_very_subtle})
-call s:h("TabLineSel",    {"fg": s:blue, "bg": s:bg_subtle, "gui": "bold", "cterm": "bold"})
+call s:h("TabLineSel",    {"fg": s:norm, "bg": s:bg_very_subtle, "gui": "bold", "cterm": "bold"})
 call s:h("TabLineFill",   {"fg": s:norm, "bg": s:bg_very_subtle})
 call s:h("CursorColumn",  {"bg": s:bg_very_subtle})
 call s:h("CursorLine",    {"fg": s:norm, "bg": s:bg_very_subtle})

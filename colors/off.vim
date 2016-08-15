@@ -96,8 +96,8 @@ call s:h("String",	{"fg": s:medium_gray, "bg": s:bg})
 hi! link Identifier       Normal
 hi! link Function         Identifier
 
-call s:h("Statement",     {"fg": s:medium_gray})
-" hi! link Statement        Normal
+" call s:h("Statement",     {"fg": s:medium_gray})
+hi! link Statement        Normal
 hi! link Conditonal       Statement
 hi! link Repeat           Statement
 hi! link Label            Statement
@@ -105,15 +105,15 @@ hi! link Operator         Statement
 hi! link Keyword          Statement
 hi! link Exception        Statement
 
-call s:h("PreProc",       {"fg": s:medium_gray})
-" hi! link PreProc          Normal
+" call s:h("PreProc",       {"fg": s:medium_gray})
+hi! link PreProc          Normal
 hi! link Include          PreProc
 hi! link Define           PreProc
 hi! link Macro            PreProc
 hi! link PreCondit        PreProc
 
-call s:h("Type",          {"fg": s:medium_gray})
-" hi! link Type             Normal
+" call s:h("Type",          {"fg": s:medium_gray})
+hi! link Type             Normal
 hi! link StorageClass     Type
 hi! link Structure        Type
 hi! link Typedef          Type

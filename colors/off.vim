@@ -89,8 +89,7 @@ hi! link Character        Constant
 hi! link Number           Constant
 hi! link Boolean          Constant
 hi! link Float            Constant
-" hi! link String           Comment
-call s:h("String",	{"fg": s:medium_gray, "bg": s:bg})
+hi! link String           Constant
 
 "call s:h("Identifier",    {"fg": s:dark_blue})
 hi! link Identifier       Normal
